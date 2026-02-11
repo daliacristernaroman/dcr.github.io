@@ -18,12 +18,12 @@ avatar: images/profile.png
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: banghao2@illinois.edu
+  email: dcrister@ualberta.ca
   facebook:
   flickr:
-  github: biboyqg
+  github: 
   instagram:
-  linkedin: banghao-chi-550737276
+  linkedin: 
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:
@@ -42,7 +42,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: "https://biboyqg.github.io" # the base hostname & protocol for your site
+url: "https://dcr.github.io" # the base hostname & protocol for your site
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
