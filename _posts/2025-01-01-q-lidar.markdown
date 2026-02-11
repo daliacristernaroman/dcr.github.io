@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Q-LiDAR: Efficient and Accurate Training-Free Quantization for Point Cloud 3D Object Detection Models"
+date: 2025-01-01 22:21:59 +00:00
+image: /images/q_lidar.png
+categories: UIUC-SSAIL
+author: "Banghao Chi"
+authors: "<strong>Banghao Chi</strong>, Hongbo Zheng, Minjia Zhang, et. al."
+venue: "arXiv"
+paper: /pdfs/q_lidar.pdf
+code: https://github.com/BiboyQG/Quantization-on-3D-Object-Detection
+---
+
+We introduce Q-LiDAR, a training-free quantization framework for 3D LiDAR object detection models that improves inference efficiency without compromising accuracy by combining component-specific techniques like SmoothQConv, channel-wise quantization, and Hessian-guided bit-width allocation.

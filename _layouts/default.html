@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-E00L9PT3V9");
+    </script>
+    <title>{{ site.name }}</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/style.css"
+    />
+    <link
+      rel="canonical"
+      href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <table
+      style="
+        width: 100%;
+        max-width: 800px;
+        border: 0px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        margin-right: auto;
+        margin-left: auto;
+      "
+    >
+      <tr style="padding: 0px">
+        <td style="padding: 0px">
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr style="padding: 0px">
+              <td style="padding: 2.5%; width: 60%; vertical-align: middle">
+                <h1>Banghao Chi</h1>
+                <p>
+                  I am an M.S. CS student at the
+                  <a href="https://siebelschool.illinois.edu/"
+                    >Siebel School of Computing and Data Science</a
+                  >, part of the
+                  <a href="https://grainger.illinois.edu/">
+                    Grainger College of Engineering</a
+                  >
+                  at
+                  <a href="https://illinois.edu/"
+                    >University of Illinois at Urbana-Champaign</a
+                  >, advised by Prof.
+                  <a href="https://minjiazhang.github.io/"> Minjia Zhang</a>,
+                  working on LLMs inference optimization.
+                </p>
+                <p>
+                  At the
+                  <a href="https://www.ncsa.illinois.edu/"
+                    >National Center for Supercomputing Applications (NCSA)</a
+                  >, I worked with Dr.
+                  <a
+                    href="https://siebelschool.illinois.edu/about/people/faculty/kcchang"
+                  >
+                    Kevin Chang</a
+                  >
+                  on developing advanced information retrieval systems using
+                  LLMs.
+                </p>
+                <p>
+                  Prior to that, I studied Mathematics at UIUC and Computer
+                  Science at
+                  <a href="https://www.xjtlu.edu.cn/en"
+                    >Xi'an Jiaotong Liverpool University</a
+                  >. During my time there, I worked with Prof.
+                  <a href="https://scholar.xjtlu.edu.cn/en/persons/XiaohuiZhu">
+                    Xiaohui Zhu</a
+                  >
+                  on developing LLMarking, an innovative automatic short answer
+                  grading system.
+                </p>
+                <p style="text-align: center">
+                  <a href="mailto:banghao2@illinois.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/BiboyQG">GitHub</a> &nbsp;/&nbsp;
+                  <a
+                    href="https://scholar.google.com/citations?user=0XAPPrEAAAAJ&hl=en"
+                    >Google Scholar</a
+                  >
+                  &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/banghao-chi/"
+                    >LinkedIn</a
+                  >
+                  &nbsp;/&nbsp;
+                  <a href="https://biboyqg.github.io/blog/">Blog</a>
+                  &nbsp;/&nbsp;
+                  <a href="pdfs/CV.pdf">CV</a>
+                </p>
+              </td>
+              <td style="padding: 2.5%; width: 40%; max-width: 40%">
+                <img
+                  style="width: 100%; max-width: 100%"
+                  alt="profile photo"
+                  src="images/profile.png"
+                />
+              </td>
+            </tr>
+          </table>
+
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td style="padding: 2.5%; width: 100%; vertical-align: middle">
+                <h2>Publications</h2>
+                <p>
+                  I'm interested in LLMs and its applications like Agents.
+                </p>
+              </td>
+            </tr>
+          </table>
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            {% for post in site.posts %} {% for cat in post.categories %} {% if
+            cat == 'publications' %}
+            <tr>
+              <td
+                style="
+                  padding: 0%;
+                  width: 25%;
+                  vertical-align: middle;
+                  min-width: 120px;
+                "
+              >
+                <img
+                  src="/tn{{post.image}}"
+                  alt="project image"
+                  style="width: auto; height: auto; max-width: 100%"
+                />
+              </td>
+              <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                <h3>{{post.title}}</h3>
+                <br />
+                {{post.authors}}
+
+                <br />
+                <font color="#38b000"
+                  ><em><strong>{{post.venue}}</strong></em></font
+                >, {{ post.date | date: "%Y" }}
+                <br />
+                {% if post.paper %}
+                <a href="{{post.paper}}">paper</a> / {% endif %} {% if
+                post.video %} <a href="{{post.video}}">video</a> / {% endif %}
+                {% if post.code %} <a href="{{post.code}}">code</a> / {% endif
+                %} {% if post.poster %} <a href="{{post.poster}}">poster</a> /
+                {% endif %} {% if post.slides %}
+                <a href="{{post.slides}}">slides</a> / {% endif %} {% if
+                post.website %} <a href="{{post.website}}">website</a> / {%
+                endif %} {% if post.youtube %}
+                <a href="{{post.youtube}}">youtube</a> / {% endif %}
+                <p></p>
+                {{ post.excerpt }}
+              </td>
+            </tr>
+            {% endif %} {% endfor %} {% endfor %}
+          </table>
+          <br />
+          <br />
+          <br />
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td style="padding: 2.5%; width: 100%; vertical-align: middle">
+                <h2>Other Projects</h2>
+                <p>
+                  These include coursework, side projects and unpublished
+                  research work.
+                </p>
+              </td>
+            </tr>
+          </table>
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            {% for post in site.posts %} {% for cat in post.categories %} {% if
+            cat != 'publications' and cat != 'Intel' %}
+            <tr>
+              <td
+                style="
+                  padding: 0%;
+                  width: 25%;
+                  vertical-align: middle;
+                  min-width: 120px;
+                "
+              >
+                <img
+                  src="/tn{{post.image}}"
+                  alt="project image"
+                  style="width: auto; height: auto; max-width: 100%"
+                />
+              </td>
+              <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                <h3>{{post.title}}</h3>
+                <br />
+                <em>{{post.categories}} {{post.course}}</em>
+                <br />
+                {{ post.date | date: "%Y-%m-%d" }}
+
+                <br />
+                {% if post.website %}
+                <a href="{{post.website}}">website</a> / {% endif %} {% if
+                post.paper %} <a href="{{post.paper}}">paper</a> / {% endif %}
+                {% if post.patent %} <a href="{{post.patent}}">patent</a> / {%
+                endif %} {% if post.patent2 %}
+                <a href="{{post.patent2}}">patent #2</a> / {% endif %} {% if
+                post.patent3 %} <a href="{{post.patent3}}">patent #3</a> / {%
+                endif %} {% if post.video %}
+                <a href="{{post.video}}">video</a> / {% endif %} {% if
+                post.video2 %} <a href="{{post.video2}}">video #2</a> / {% endif
+                %} {% if post.code %} <a href="{{post.code}}">code</a> / {%
+                endif %} {% if post.poster %}
+                <a href="{{post.poster}}">poster</a> / {% endif %} {% if
+                post.slides %} <a href="{{post.slides}}">slides</a> / {% endif
+                %}
+                <p></p>
+                {{ post.excerpt }}
+              </td>
+            </tr>
+            {% endif %} {% endfor %} {% endfor %}
+          </table>
+
+          <br />
+          <br />
+          <br />
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td style="padding: 2.5%; width: 100%; vertical-align: middle">
+                <h2>Working Experience</h2>
+              </td>
+            </tr>
+          </table>
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td style="padding-left: 0%; padding-right: 2.5%; width: 100%">
+                <ul style="padding-left: 2.5%">
+                  {% for experience in site.data.work_experience %}
+                  <li
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <span>
+                      • {{ experience.title }}{% if experience.course_code %} for
+                      {% if experience.course_url %}
+                      <a href="{{ experience.course_url }}">{{ experience.course_code }}</a>
+                      {% else %}
+                      {{ experience.course_code }}
+                      {% endif %}
+                      {% elsif experience.organization %} at
+                      {% if experience.organization_url %}
+                      <a href="{{ experience.organization_url }}">{{ experience.organization }}</a>
+                      {% else %}
+                      {{ experience.organization }}
+                      {% endif %}
+                      {% if experience.organization_short %}
+                      ({{ experience.organization_short }})
+                      {% endif %}
+                      {% endif %}
+                    </span>
+                    <span style="white-space: nowrap">
+                      {% if experience.location %}{{ experience.location }}{% if experience.period %}, {% endif %}{% endif %}{{ experience.period }}
+                    </span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+          </table>
+
+          <br />
+          <br />
+          <br />
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td style="padding: 2.5%; width: 100%; vertical-align: middle">
+                <h2>Awards &amp; Honors</h2>
+              </td>
+            </tr>
+          </table>
+          <table
+            style="
+              width: 96%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+              border-collapse: collapse;
+            "
+          >
+            <tr style="border-bottom: 1px solid #ddd">
+              <th style="padding: 10px; text-align: left">Year</th>
+              <th style="padding: 10px; text-align: left">Award</th>
+              <th style="padding: 10px; text-align: left">Institution</th>
+            </tr>
+            {% for award in site.data.awards %}
+            <tr style="border-bottom: 1px solid #ddd">
+              <td style="padding: 10px">{{ award.year }}</td>
+              <td style="padding: 10px">{{ award.award }}</td>
+              <td style="padding: 10px">{{ award.institution }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Footer -->
+    <table
+      style="
+        width: 100%;
+        max-width: 800px;
+        border: 0px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+      "
+    >
+      <tr>
+        <td style="padding: 0px">
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td
+                style="
+                  padding: 20px;
+                  text-align: center;
+                  font-size: 14px;
+                  color: #777;
+                "
+              >
+                <p>
+                  © {{ site.time | date: '%Y' }} Banghao Chi. All rights
+                  reserved.
+                </p>
+                <p>Last updated: {{ site.time | date: "%B %Y" }}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
